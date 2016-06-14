@@ -101,20 +101,20 @@ export default class UltraQ {
     // text
     let text = decodeURI(getQueryVariable('text'))
     if(text == 'undefined'){
-        text = 'ウルトラQ'
+        text = 'Mawaru'
     }
 
-    let textWidth = this.wW*90/100
+    let textWidth = this.wW*95/100
     let textHeight = textWidth/text.length
 
     let fontSize = String(Math.floor(textHeight)) + 'px'
-    let fontKind = 'YuGothic'
+    let fontKind = 'Futura, YuGothic'
     imagecontext.textAlign = "center"
     imagecontext.font = fontSize + ' ' + fontKind
     imagecontext.fillStyle = "white";
 
     let textPosX = this.wW/2 
-    let textPosY = this.wH/2 
+    let textPosY = this.wH/2 + textHeight/4
 
     imagecontext.fillText(text, textPosX, textPosY)
 
