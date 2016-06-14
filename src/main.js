@@ -1,11 +1,8 @@
 // Requires
 require("babel/polyfill");
+const UltraQ = require('./scripts/ultraq.js');
+var ultraq = new UltraQ();
 
-const Sample = require('./scripts/sample.js');
-
-var sample = new Sample();
-
-
-{
-  sample.foo();
-}
+jQuery(document).ready(function($) {
+  ultraq.run();
+});

@@ -11,9 +11,16 @@ html
   body
 
     #container
+
     //- script
-    //- For Face tracking
     script(src="./js/utils.js")
     script(src="./js/jquery.min.js")
-
+    script(src="./js/dat.gui.min.js")
+    script(src="./js/ShaderLoader.min.js")
+    script(src="./js/Tween.js")
+    script(src="./js/three.min.js")
     script(src='bundle.js', type='text/javascript')
+
+    //- shader
+    script(data-src="./js/shader/sample.vert",data-name="myShader",type="x-shader/x-vertex")
+    script(data-src="./js/shader/sample.frag",data-name="myShader",type="x-shader/x-fragment")
